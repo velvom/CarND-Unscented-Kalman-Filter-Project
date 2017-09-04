@@ -67,6 +67,23 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  ///* Instantaneous NIS for radar
+  double NIS_radar_;
+
+  ///* Instantaneous NIS for laser
+  double NIS_laser_;
+
+  ///* Measurement covariance matrix - laser
+  MatrixXd R_laser_;
+
+  ///* Measurement covariance matrix - radar
+  MatrixXd R_radar_;
+
+  ///* Set measurement dimension, lidar can measure px and py
+  int n_z_laser_;
+
+  ///* Set measurement dimension, radar can measure r, phi, and r_dot
+  int n_z_radar_;
 
   /**
    * Constructor
